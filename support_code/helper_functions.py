@@ -14,7 +14,10 @@ import scipy.signal
 try:
     from .APS import APS
 except ImportError:
-    from APS import APS
+    try:
+        from APS import APS
+    except ImportError:
+        from support_code.APS import APS
 import marimo as mo
 
 
